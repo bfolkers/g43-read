@@ -4,17 +4,16 @@
   </div>
   <div class="col lg-2 col-md-2 col-sm-2 col-xs-2">
     <select ng-model="$ctrl.orderBy">
-      <option value="-vote_count" selected="selected">Sort by Votes</option>
-      <option value="-created_at">Sort by Date</option>
-      <option value="title">Sort by Title</option>
+      <option value="title" selected="selected">Sort by Title</option>
+      <option value="genre">Sort by Genre</option>
     </select>
   </div>
   <div class="col lg-6 col-md-6 col-sm-6 col-xs-6">
   </div>
   <div class="col lg-2 col-md-2 col-sm-2 col-xs-2">
-    <a class="btn btn-default" ui-sref="postNew" aria-label="Toggle ngShow">New Post</a>
+    <a class="btn btn-default" ui-sref="newBook" aria-label="Toggle ngShow">New Book</a>
   </div>
 </div><br>
-<div ng-repeat="post in $ctrl.posts | filter:search:strict | orderBy: $ctrl.orderBy">
+<div ng-repeat="book in $ctrl.books | filter:search:strict | orderBy: $ctrl.orderBy">
   <book book="book"></book><br>
 </div>

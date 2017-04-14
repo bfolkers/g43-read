@@ -18,12 +18,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="./index.html"><img src="./images/book.png" alt=""></a>
-            <a class="navbar-brand" href="./index.html">galvanizeReads</a>
+            <a class="navbar-brand" ui-sref="home"><img src="./images/book.png" alt=""></a>
+            <a class="navbar-brand" ui-sref="home">galvanizeReads</a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-              <li><a ui-sref="books">Books</a></li>
+              <li><a ui-sref="bookList">Books</a></li>
               <li><a ui-sref="authors">Authors</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
@@ -36,7 +36,7 @@
         </div>
       </nav>
     </header>
-    <main class="main-pane">
+    <main class="container main-pane">
       <ui-view></ui-view>
     </main>
     <script src="/angular/angular.min.js"></script>
@@ -48,5 +48,11 @@
     <script src="/javascripts/app.module.js"></script>
     <script src="/javascripts/app.config.js"></script>
     <script src="/javascripts/home.component.js"></script>
+    <script src="/javascripts/books/book.service.js"></script>
+    <script src="/javascripts/books/book-single.component.js"></script>
+    <script src="/javascripts/books/book-list.component.js"></script>
+    <script src="/javascripts/books/book-page.component.js"></script>
+    <script src="/javascripts/authors/author.service.js"></script>
+    <script src="/javascripts/authors/author-single.component.js"></script>
   </body>
 </html>

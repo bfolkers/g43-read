@@ -15,5 +15,25 @@
         url: '/',
         component: 'home'
       })
+      .state({
+        name: 'bookList',
+        url: '/books',
+        component: 'bookList'
+      })
+      .state({
+        name: 'bookPage',
+        url: '/books/:id',
+        component: 'bookPage'
+      })
+      .state({
+        name: 'book',
+        url: '/bookPage/:id',
+        component: 'book'
+      })
+      .state({
+        name: 'author',
+        url: '/authors/:id',
+        component: 'author'
+      })
   }
 }());

@@ -1,0 +1,23 @@
+<div class="row book">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <img src="{{$ctrl.book.image_url}}" class="book-image" alt="image-of-{{$ctrl.book.title}}"/>
+  </div>
+  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <h3><a ui-sref="bookPage({id: $ctrl.book.id})">{{$ctrl.book.title}}</a></h3><br>
+        <div ng-repeat="author in $ctrl.book.authors">
+          <h5><a ui-sref="author({id: author.data[0].id})">{{author.data[0].name}}</a></h5>
+        </div>
+        <h6><em>{{$ctrl.book.genre}}</em></h6>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+      <a href="" class="button btn btn-primary edit-button" id="">Edit</a>
+      <a href="" class="button btn btn-danger delete-button" id="">Delete</a>
+      </div>
+    </div>
+    <div class="row">
+      <p>{{$ctrl.book.description}}</p>
+    </div>
+  </div>
+</div><br>
